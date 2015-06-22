@@ -6,6 +6,7 @@ Please note: This change log may not be accurate
 
 #### 0.7.6
 - Bugfix for install/upgrade from older versions!
+- Add readme and prepare for github
 
 #### 0.7.5
 - Some bugfixes for the rating.
