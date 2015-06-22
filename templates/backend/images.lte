@@ -1,0 +1,33 @@
+{% autoescape false %}
+
+<div class="screen_preview">
+<ol id='thumb_list'>
+{% for img in images %}
+	<li class='thumb'>
+		<a href='{{ img.src }}' rel='lightbox[mod_info]' title='{{ img.title }}'><img src='{{ img.src }}' title='{{ img.title }}'></a>
+		<br /><input type="checkbox" value="1" checked="checked" /> active <a><img class="del_icon" src="{{ THEME_URL }}/images/delete_16.png" /></a> 
+	</li>
+{% endfor %}
+</ol>
+</div>
+
+<input name="image_order_list" type="hidden" id="aldus_test"/>
+
+<script type="text/javascript">
+	$("#thumb_list").dragsort(
+		{ dragSelector: "li",
+		dragBetween: true,
+		dragEnd: saveOrder,
+		placeHolderTemplate: "<li><a><img src='{{ images[0].src }}' /></a></li>" }
+		);
+		
+	function saveOrder() {
+		var data = $("#thumb_list li").map(function() { return $(this).children().html(); }).get();
+		$("input[name=image_order_list]").val(data.join("|"));
+		
+		// var ref = document.getElementById("aldus_test");
+		// if (ref) alert ("call "+ref.value);
+	};
+</script>
+	
+{% endautoescape %}

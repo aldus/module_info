@@ -1,0 +1,76 @@
+{% autoescape false %}
+
+<form name="select_section{{ section_id }}" action="{{ LEPTON_URL }}/modules/module_info/save.php" method="post" ENCTYPE="multipart/form-data">
+	<input type="hidden" name="page_id" value="{{ page_id }}" />
+	<input type="hidden" name="section_id" value="{{ section_id }}" />
+
+<div id="optindex" class="optindex">
+<div class="container">
+<ul>
+{% for block in module_data %}
+	<li><a href="#tab{{ loop.index }}" {% if loop.index == 3 %}class="selected"{% endif %}>{{ block.label }}</a></li>
+{% endfor %}
+</ul>
+
+{% for block in module_data %}
+<div id="tab{{ loop.index }}">
+<h2 id="tab-{{ loop.index }}-head">{{ block.label }}</h2>
+	<table class="module_info settings_table" id="tab-{{ loop.index }}">
+		{% for item in block.items %}
+		<tr>
+			<td class="label">{{ item.label }}</td>
+		
+			{% if item.type == "text" %}
+			<td class="input"><input name='{{ item.name }}' type='text' value='{{ item.value }}'><td>
+			{% endif %}
+
+			{% if item.type == "select" %}
+			<td class="input">{{ item.value }}<td>
+			{% endif %}
+
+			{% if item.type == "textarea" %}		
+			<td class="input_text"><textarea name='{{ item.name }}'>{{ item.value }}</textarea></td>
+			{% endif %}
+		
+			{% if item.type == "file" %}		
+			<td class="input"><input name='{{ item.name }}' type='file'></td>
+			{% endif %}
+			
+			{% if item.type == "file_screen" %}		
+			<td class="images">
+			{{ item.value }}
+				<input name='{{ item.name }}[]' id="file_script" type='file' accept="jpg,jpeg,gif,gz,png,pdf,tif,zip">
+				<div id="upload_wrap" class="hidden MultiFile-wrap"></div>
+			</td>
+			{% endif %}
+			
+			{% if item.type == "html" %}		
+			<td class="input html">{{ item.value }}</td>
+			{% endif %}
+			
+		</tr>
+		{% endfor %}
+	</table>
+
+</div>
+{% endfor %}
+
+<table class="module_info">
+	<tr>
+		<td align="left"><input class="button" type="submit" value="{{ TEXT_SAVE }}"/></td>
+		<td align="right"><input class="button cancel" type="button" value="{{ TEXT_CANCEL }}" onclick="javascript: window.location = 'index.php';" /></td>
+	</tr>
+</table>
+
+</div>
+</div>
+
+</form>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+  $("#optindex ul").idTabs();
+/* ]]> */
+</script>
+	
+{% endautoescape %}

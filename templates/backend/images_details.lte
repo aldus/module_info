@@ -1,0 +1,71 @@
+{% autoescape false %}
+
+<div class="screen_preview">
+<table class="img_detail" id="thumb_list">
+<tr>
+	<td class="c_title">&nbsp;</td>
+	<td class="c_title">active</td>
+	<td class="c_title">title</td>
+	<td class="c_title">alt</td>
+	<td class="c_title">delete</td>
+</tr>
+{% for img in images %}
+	<tr>
+		<td>
+			<a href='{{ img.src }}' rel='lightbox[mod_info]' title='{{ img.title }}'><img src='{{ img.src }}' title='{{ img.title }}'></a>
+		</td>
+		<td>
+			<input type="hidden" name="active[{{ img.id }}]" value="0" />
+			<input class="img_detail" type="checkbox" name="active[{{ img.id }}]" value="1" {% if img.active == 1 %}checked="checked" {% endif %} />
+		</td>
+		<td>
+			<input class="img_detail" type="text" name="title[{{ img.id }}]" value="{{ img.title }}" />
+		</td>
+		<td>
+			<input class="img_detail" type="text" name="alt[{{ img.id }}]" value="{{ img.alt }}" />
+		</td>
+		<td>
+			<input type="checkbox" name="delete[]" value="{{ img.id }}" />
+		</td>
+	</tr>	
+	{% endfor %}
+ </table>
+</div>
+
+<input name="image_order_list" type="hidden" id="aldus_test"/>
+<script type="text/javascript">
+
+	$("#thumb_list").dragsort(
+		{
+		dragSelector: "tr",
+		dragBetween: true,
+		dragEnd: saveOrder,
+		placeHolderTemplate: "<li><a><img src='{{ images[0].src }}' /></a></li>" }
+		);
+		
+	function saveOrder() {
+		var data = $("#thumb_list td").map(function() { return $(this).children().html(); }).get();
+		$("input[name=image_order_list]").val(data.join("|"));
+		/*
+		var ref = document.getElementById("aldus_test");
+		if (ref) alert ("call "+ref.value);
+		*/
+	};
+
+var xmlhttp;
+if (window.XMLHttpRequest) {
+	// code for IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp=new XMLHttpRequest();
+} else {
+	// code for IE6, IE5
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+  
+	function do_count(aID) {
+		xmlhttp.open("POST","{{ LEPTON_URL }}/modules/modul_info/ajax/counter.php",true);
+		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		xmlhttp.send("id="+aID+"&unis=aldus_8907");
+	}
+</script>
+	
+{% endautoescape %}

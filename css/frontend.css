@@ -1,0 +1,74 @@
+/**
+ *
+ * @category        page
+ * @package         LEPTON-CMS - Modules: Module Information
+ * @author          Dietrich Roland Pehlke
+ * @license         http://www.gnu.org/licenses/gpl.html
+ * @platform        LEPTON-CMS 2.0.0
+ * @requirements    PHP 5.4 and higher
+ * @version         0.7.6
+ * @lastmodified    Jun 2015 
+ *
+ */ 
+table.module_info {
+	width: 100%;
+	font-size: 12px;
+	border-collapse: separate;
+	border-spacing: 0px;
+}
+
+table.module_info tr {
+	margin: 0px;
+	padding: 0px;
+}
+
+td.label {
+	color: #7cb22a;
+	font-weight: bold;
+	width: 80px;
+	text-align: right;
+	padding-right: 10px;
+	margin: 0px;
+	height: auto;
+	vertical-align: top !important;
+}
+
+td.value {
+	margin: 0px;
+	color: #888888;
+	height: auto;
+}
+
+td.value a img.single {
+	max-width: 400px;
+	overflow: hidden;
+}
+
+td.value a img.thumb {
+	max-width: 120px;
+	overflow: hidden;
+	display: block;
+	float: left;
+}
+
+/**
+ *	Display code
+ */
+pre.example, pre.php {
+	line-height: 1.0em !important;
+	width: 94%;
+	color: #666666;
+	background-color: #DDDDDD;
+	overflow: hidden;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+pre.php {
+	background-color: #DDFFDD;
+}
+
+td.value ul {
+	margin-bottom: 0px !important;
+	padding-bottom: 0px !important;
+}

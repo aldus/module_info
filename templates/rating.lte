@@ -1,0 +1,25 @@
+{% autoescape false %}
+<!-- begin rating code -->
+<script type="text/javascript">
+/* <![CDATA[ */
+{{ rating_js }}
+/* ]]> */
+</script>
+<div class='rating_wrapper'>
+	<div class="sp_rating">
+		<div class="rating"></div>
+		<div class="base"><div class="average" style="width:{{ average }}%">{{ average }}</div></div>
+		<div class="votes">{{ votes }}</div>
+		<div class="status">
+			<div class='score'>
+				<a class='score1' href='?score=1&amp;sec={{ section_id }}&amp;user={{ user_ip }}&amp;{{ h_name }}={{ h_value }}'>1</a>
+				<a class='score2' href='?score=2&amp;sec={{ section_id }}&amp;user={{ user_ip }}&amp;{{ h_name }}={{ h_value }}'>2</a>
+				<a class='score3' href='?score=3&amp;sec={{ section_id }}&amp;user={{ user_ip }}&amp;{{ h_name }}={{ h_value }}'>3</a>
+				<a class='score4' href='?score=4&amp;sec={{ section_id }}&amp;user={{ user_ip }}&amp;{{ h_name }}={{ h_value }}'>4</a>
+				<a class='score5' href='?score=5&amp;sec={{ section_id }}&amp;user={{ user_ip }}&amp;{{ h_name }}={{ h_value }}'>5</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end rating code -->
+{% endautoescape %}
