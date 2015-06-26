@@ -8,7 +8,7 @@
  * @license         http://www.gnu.org/licenses/gpl.html
  * @platform        LEPTON-CMS 2.0.0
  * @requirements    PHP 5.4 and higher
- * @version         0.7.6
+ * @version         0.7.7
  * @lastmodified    Jun 2015 
  *
  */

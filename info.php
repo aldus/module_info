@@ -8,7 +8,7 @@
  * @license         http://www.gnu.org/licenses/gpl.html
  * @platform        LEPTON-CMS 2.0.0
  * @requirements    PHP 5.4 and higher
- * @version         0.7.6
+ * @version         0.7.7
  * @lastmodified    Jun 2015 
  *
  */
@@ -16,7 +16,7 @@
 $module_directory	= 'module_info';
 $module_name		= 'Module Information';
 $module_function	= 'page';
-$module_version		= '0.7.6';
+$module_version		= '0.7.7';
 $module_platform	= '2.0.0';
 $module_author		= 'Dietrich Roland Pehlke';
 $module_license		= 'GNU General Public License';
