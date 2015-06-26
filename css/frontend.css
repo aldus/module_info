@@ -72,3 +72,8 @@ td.value ul {
 	margin-bottom: 0px !important;
 	padding-bottom: 0px !important;
 }
+
+span.require {
+	color: #AA0000;
+	font-weight: bold;
+}

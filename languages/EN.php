@@ -38,6 +38,7 @@ $MOD_MODULINFO['SCREEN_INFO']	= "<font color='#990000'>Please not more than 500 
 $MOD_MODULINFO['GUID']	= "GUID";
 $MOD_MODULINFO['PLATFORM']	= "Platform";
 $MOD_MODULINFO['REQUIRES']	= "Requires";
+$MOD_MODULINFO['REQUIRES_DISPLAY'] = "<span class='require'>%s</span>";
 $MOD_MODUL_INFO['LABEL_BLOCK_A'] = "Basic";
 $MOD_MODUL_INFO['LABEL_BLOCK_B'] = "Descriptions";
 $MOD_MODUL_INFO['LABEL_BLOCK_C'] = "Images";
