@@ -1,7 +1,5 @@
 {% autoescape false %}
 <!-- module intern -->
-<h4>Module information - internal</h4>
-
 <table class="module_info">
 {% for mod in all_info %}
 <tr>
