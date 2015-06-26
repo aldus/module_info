@@ -42,12 +42,10 @@ $MOD_MODULINFO['REQUIRES_DISPLAY'] = "<span class='require'>%s</span>";
 $MOD_MODUL_INFO['LABEL_BLOCK_A'] = "Basisdaten";
 $MOD_MODUL_INFO['LABEL_BLOCK_B'] = "Beschreibungen";
 $MOD_MODUL_INFO['LABEL_BLOCK_C'] = "Bilder";
-$MOD_MODUL_INFO['LABEL_BLOCK_A'] = "Basic";
-$MOD_MODUL_INFO['LABEL_BLOCK_B'] = "Descriptions";
-$MOD_MODUL_INFO['LABEL_BLOCK_C'] = "Images";
 $MOD_MODUL_INFO['LABEL_BLOCK_D'] = "Statistik";
 $MOD_MODUL_INFO['LABEL_STATS_DOWNLOAD'] = "Downloads";
 $MOD_MODUL_INFO['LABEL_STATS_VOTES'] = "Stimmen";
 $MOD_MODUL_INFO['LABEL_STATS_AVERAGE'] = "Average";
 
+$MOD_MODUL_INFO['DISPLAY_EXTERNAL_LINK'] = "<a href='%s' target='_blank'>%s</a>";
 ?>

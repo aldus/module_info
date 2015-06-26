@@ -8,6 +8,7 @@ Please note: This change log may not be accurate
 - Bugfix for install/upgrade from older versions!
 - Add readme and prepare for github
 - Add missing fields in frontend (e.g. Forum and Web-Link)
+- Add link-template for external links (like e.g. forum or web-link) in language-files.
 
 #### 0.7.5
 - Some bugfixes for the rating.

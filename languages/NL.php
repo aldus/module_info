@@ -47,4 +47,5 @@ $MOD_MODUL_INFO['LABEL_STATS_DOWNLOAD'] = "Downloads";
 $MOD_MODUL_INFO['LABEL_STATS_VOTES'] = "Votes";
 $MOD_MODUL_INFO['LABEL_STATS_AVERAGE'] = "Average";
 
+$MOD_MODUL_INFO['DISPLAY_EXTERNAL_LINK'] = "<a href='%s' target='_blank'>%s</a>";
 ?>
