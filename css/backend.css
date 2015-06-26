@@ -23,7 +23,7 @@ td.input {
 	height:18px;
 	margin-bottom:5px;
 }
-input[type='text'], textarea {
+.settings_table input[type='text'], textarea {
 	display:block;
 	width:500px;
 	font-family: Verdana, sans-serif;
@@ -44,7 +44,7 @@ td.input_text, td.label_text {
 	margin-top:0px;
 }
 
-td.input_text {
+.settings_table td.input_text {
 	width: 500px;
 }
 

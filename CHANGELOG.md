@@ -5,6 +5,8 @@ This modul allows to keep information about a module, code-snippet or template/b
 Please note: This change log may not be accurate
 
 #### 0.7.7
+- Bugfixes for multible sections
+- Bugfixes inside backend-css for problems within the backend-theme (manage-sections)
 
 #### 0.7.6
 - Bugfix for install/upgrade from older versions!

@@ -29,18 +29,20 @@ if (defined('LEPTON_PATH')) {
 	}
 }
 
-function restore_string ($aStr) {
-	$lookup = array (
-		"<br />"	=> "\n",
-		"\\'"		=> "'",
-		"\\\""		=> "\""
-	);
-	$found = array ();
-	$replace = array ();
+if (!function_exists("restore_string")) {
+	function restore_string ($aStr) {
+		$lookup = array (
+			"<br />"	=> "\n",
+			"\\'"		=> "'",
+			"\\\""		=> "\""
+		);
+		$found = array ();
+		$replace = array ();
 	
-	foreach ($lookup as $k=>$v) { $found[]= $k; $replace[]= $v; }
+		foreach ($lookup as $k=>$v) { $found[]= $k; $replace[]= $v; }
 	
-	return str_replace($found, $replace, $aStr);
+		return str_replace($found, $replace, $aStr);
+	}
 }
 
 $lang = (dirname(__FILE__))."/languages/". LANGUAGE .".php";
