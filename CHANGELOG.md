@@ -7,6 +7,7 @@ Please note: This change log may not be accurate
 #### 0.7.6
 - Bugfix for install/upgrade from older versions!
 - Add readme and prepare for github
+- Add missing fields in frontend (e.g. Forum and Web-Link)
 
 #### 0.7.5
 - Some bugfixes for the rating.

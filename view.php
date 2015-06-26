@@ -169,6 +169,18 @@ $all_info[] = array(
 	'value'	=> $mod_info['last_info']
 );
 
+//	Forum
+$all_info[] = array(
+	'label'	=> $MOD_MODULINFO['WB_THREAD'],
+	'value'	=> $mod_info['wb_thread']
+);
+
+//	Web-Link
+$all_info[] = array(
+	'label'	=> $MOD_MODULINFO['WEB_LINK'],
+	'value'	=> $mod_info['web_link']
+);
+
 //	Rating
 $all_info[] = array(
 	'label'	=> $MOD_MODULINFO['RATING'],
