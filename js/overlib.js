@@ -8,7 +8,7 @@
  * @author          Erik Bosrup, LEPTON Project
  * @copyright       2010-2015 LEPTON Project
  * @link            http://www.LEPTON-cms.org
- * @license         http://www.gnu.org/licenses/gpl.html
+ *  @copyright      2009-2014 Dietrich Roland Pehlke
  * @license_terms   please see LICENSE and COPYING files in your package
  *
  */

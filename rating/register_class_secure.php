@@ -2,14 +2,14 @@
 
 /**
  *
- * @category        page
- * @package         LEPTON-CMS - Modules: Module Information
- * @author          Dietrich Roland Pehlke
- * @license         http://www.gnu.org/licenses/gpl.html
- * @platform        LEPTON-CMS 2.0.0
- * @requirements    PHP 5.4 and higher
- * @version         0.7.7
- * @lastmodified    Jun 2015 
+ *  @module         Module Information
+ *  @version        see info.php of this module
+ *  @author         Dietrich Roland Pehlke
+ *  @copyright      2009-2014 Dietrich Roland Pehlke
+ *  @license        http://www.gnu.org/licenses/gpl.html
+ *  @license terms  see info.php of this module
+ *  @platform       see info.php of this module
+ *
  *
  */
 global $lepton_filemanager;
