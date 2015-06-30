@@ -280,7 +280,7 @@ if($num_of_images > 0) {
 		/**
 		 *	Build the link - include the lightbox-call
 		 */
-		$link .= "<a href='".$ref['src']."' rel='lightbox[mod_info]' title='".$ref['title']."' ><img src='".$ref['src']."' class='".$class_name."' alt='".$ref['alt']."' /></a>";
+		$link .= "<a href='".$ref['src']."' rel='lightbox[mod_info_".$section_id."]' title='".$ref['title']."' ><img src='".$ref['src']."' class='".$class_name."' alt='".$ref['alt']."' /></a>";
 	}
 	
 	$all_info[] = array(
