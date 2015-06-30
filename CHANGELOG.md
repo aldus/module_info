@@ -8,6 +8,7 @@ Please note: This change log may not be accurate
 - Bugfixes for multible sections
 - Bugfixes inside backend-css for problems within the backend-theme (manage-sections)
 - Remove text from frontend-template view.lte
+- Bugfixes inside backend for use in more than one section on one page.
 
 #### 0.7.6
 - Bugfix for install/upgrade from older versions!

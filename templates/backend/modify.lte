@@ -40,7 +40,7 @@
 			<td class="images">
 			{{ item.value }}
 				<input name='{{ item.name }}[]' id="file_script" type='file' accept="jpg,jpeg,gif,gz,png,pdf,tif,zip">
-				<div id="upload_wrap" class="hidden MultiFile-wrap"></div>
+				<div id="upload_wrap_{{ section_id }}" class="hidden MultiFile-wrap"></div>
 			</td>
 			{% endif %}
 			

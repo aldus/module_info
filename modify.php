@@ -121,10 +121,13 @@ if ($temp_data['parent'] != 0) {
 	
 }	
 
+/**
+ *	JS File uploader
+ */
 $js_source = file_get_contents( __DIR__."/js/backend_upload.js");
 $js_source = str_replace(
-	array("{LEPTON_URL}", "{THEME_URL}"),
-	array( LEPTON_URL, THEME_URL ),
+	array("{LEPTON_URL}", "{THEME_URL}", "{SECTION_ID}"),
+	array( LEPTON_URL, THEME_URL, $section_id ),
 	$js_source
 );
 
