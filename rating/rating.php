@@ -60,6 +60,9 @@ if ($info['rating'] == '') {
 } else {
 	$temp = explode(",", $info['rating']);
 }
+if (count($temp) < 6) {
+	for($i = count($temp); $i<6; $i++) $temp[] = 0;
+}
 $temp[ $score ]++;
 
 $info['rating'] = implode(",", $temp);
