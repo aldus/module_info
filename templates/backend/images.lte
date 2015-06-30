@@ -4,7 +4,7 @@
 <ol id='thumb_list'>
 {% for img in images %}
 	<li class='thumb'>
-		<a href='{{ img.src }}' rel='lightbox[mod_info]' title='{{ img.title }}'><img src='{{ img.src }}' title='{{ img.title }}'></a>
+		<a href='{{ img.src }}' rel='lightbox[mod_info_{{ section_id }}]' title='{{ img.title }}'><img src='{{ img.src }}' title='{{ img.title }}'></a>
 		<br /><input type="checkbox" value="1" checked="checked" /> active <a><img class="del_icon" src="{{ THEME_URL }}/images/delete_16.png" /></a> 
 	</li>
 {% endfor %}

@@ -12,7 +12,7 @@
 {% for img in images %}
 	<tr>
 		<td>
-			<a href='{{ img.src }}' rel='lightbox[mod_info]' title='{{ img.title }}'><img src='{{ img.src }}' title='{{ img.title }}'></a>
+			<a href='{{ img.src }}' rel='lightbox[mod_info_{{ section_id }}]' title='{{ img.title }}'><img src='{{ img.src }}' title='{{ img.title }}'></a>
 		</td>
 		<td>
 			<input type="hidden" name="active[{{ img.id }}]" value="0" />

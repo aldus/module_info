@@ -96,7 +96,8 @@ if(count($images) > 0) {
 		array(
 			'images' => $images,
 			'THEME_URL'	=> THEME_URL,
-			'LEPTON_URL' => LEPTON_URL
+			'LEPTON_URL' => LEPTON_URL,
+			'section_id' => $section_id
 		)
 	);
 }
