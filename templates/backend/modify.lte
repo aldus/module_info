@@ -8,12 +8,12 @@
 <div class="container">
 <ul>
 {% for block in module_data %}
-	<li><a href="#tab{{ loop.index }}" {% if loop.index == 3 %}class="selected"{% endif %}>{{ block.label }}</a></li>
+	<li><a href="#tab_{{ section_id }}_{{ loop.index }}" {% if loop.index == 3 %}class="selected"{% endif %}>{{ block.label }}</a></li>
 {% endfor %}
 </ul>
 
 {% for block in module_data %}
-<div id="tab{{ loop.index }}">
+<div id="tab_{{ section_id }}_{{ loop.index }}">
 <h2 id="tab-{{ loop.index }}-head">{{ block.label }}</h2>
 	<table class="module_info settings_table" id="tab-{{ loop.index }}">
 		{% for item in block.items %}
