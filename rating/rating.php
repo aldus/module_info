@@ -29,14 +29,14 @@ if (defined('LEPTON_PATH')) {
 		trigger_error(sprintf("[ <b>%s</b> ] Can't include class.secure.php!", $_SERVER['SCRIPT_NAME']), E_USER_ERROR);
 	}
 }
-
+/*
 if(!isset($_SESSION['miv_'])) die();
 $h = $_SESSION['miv_'];
 $n = substr($h, 0, 16);
 $v = substr($h, -16);
 if (!isset($_GET[ $n ])) die();
 if ($_GET[ $n ] != $v) die();
-
+*/
 unset( $_SESSION['miv_'] );
 
 if (!isset($_GET['sec'])) die();

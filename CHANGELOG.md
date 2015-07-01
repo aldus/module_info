@@ -11,6 +11,7 @@ Please note: This change log may not be accurate
 - Bugfixes inside backend for use in more than one section on one page.
 - Bugfixes for the file-uploader in backend.
 - Bugfix for sorting images in backend via drag&drop.
+- Bugfix for rating with more than one section on one page.
 
 #### 0.7.6
 - Bugfix for install/upgrade from older versions!
