@@ -11,16 +11,8 @@
 
    $(document).ready(function()
 	{
-		/**
-       if($(".overlib").length)
-	   {
-         $.insert('{LEPTON_URL}/modules/modul_info/js/overlib.js');
-	   }
-	   **/
        if($("#upload_wrap_{SECTION_ID}").length)
 	   {
-			// $.insert('{LEPTON_URL}/modules/lib_jquery/jquery-ui/external/jquery.MultiFile.pack.js');
-			// $.insert('{LEPTON_URL}/modules/lib_jquery/jquery-ui/external/jquery.MetaData.js');
 			$('#upload_wrap_{SECTION_ID}').removeClass('hidden');
 			$('.noscript').removeClass('hidden');
 			$('#file_script_{SECTION_ID}').MultiFile({
