@@ -9,6 +9,8 @@ Please note: This change log may not be accurate
 - Bugfixes inside backend-css for problems within the backend-theme (manage-sections)
 - Remove text from frontend-template view.lte
 - Bugfixes inside backend for use in more than one section on one page.
+- Bugfixes for the file-uploader in backend.
+- Bugfix for sorting images in backend via drag&drop.
 
 #### 0.7.6
 - Bugfix for install/upgrade from older versions!

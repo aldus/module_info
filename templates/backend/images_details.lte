@@ -1,7 +1,7 @@
 {% autoescape false %}
 
 <div class="screen_preview">
-<table class="img_detail" id="thumb_list">
+<table class="img_detail" id="thumb_list_{{ section_id }}">
 <tr>
 	<td class="c_title">&nbsp;</td>
 	<td class="c_title">active</td>
@@ -35,7 +35,7 @@
 <input name="image_order_list" type="hidden" id="aldus_test"/>
 <script type="text/javascript">
 
-	$("#thumb_list").dragsort(
+	$("#thumb_list_{{ section_id }}").dragsort(
 		{
 		dragSelector: "tr",
 		dragBetween: true,
@@ -44,7 +44,7 @@
 		);
 		
 	function saveOrder() {
-		var data = $("#thumb_list td").map(function() { return $(this).children().html(); }).get();
+		var data = $("#thumb_list_{{ section_id }} td").map(function() { return $(this).children().html(); }).get();
 		$("input[name=image_order_list]").val(data.join("|"));
 		/*
 		var ref = document.getElementById("aldus_test");
