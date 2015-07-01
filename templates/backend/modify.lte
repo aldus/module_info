@@ -39,7 +39,7 @@
 			{% if item.type == "file_screen" %}		
 			<td class="images">
 			{{ item.value }}
-				<input name='{{ item.name }}[]' id="file_script" type='file' accept="jpg,jpeg,gif,gz,png,pdf,tif,zip">
+				<input name='{{ item.name }}[]' id="file_script_{{ section_id }}" type='file' accept="jpg,jpeg,gif,gz,png,pdf,tif,zip">
 				<div id="upload_wrap_{{ section_id }}" class="hidden MultiFile-wrap"></div>
 			</td>
 			{% endif %}

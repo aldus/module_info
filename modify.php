@@ -115,13 +115,14 @@ $platform_select .= "</select>\n";
  *
  *
  */
+/*
 $temp_info = $database->query("SELECT `parent`, `page_id` from `".TABLE_PREFIX."pages` where `page_id`='".$page_id."'");
 $temp_data = $temp_info->fetchRow();
 if ($temp_data['parent'] != 0) {
 	$temp_info = $database->query("SELECT `parent`, `menu_title` from `".TABLE_PREFIX."pages` where `page_id`='".$temp_data['page_id']."'");
 	
 }	
-
+*/
 /**
  *	JS File uploader
  */

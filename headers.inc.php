@@ -74,7 +74,9 @@ if ( file_exists( LEPTON_PATH.'/modules/lib_jquery/plugins/Slimbox2' ) ) {
 				'/modules/lib_jquery/jquery-ui/external/jquery.idTabs.min.js',
 				'/modules/lib_jquery/jquery-ui/external/jquery-insert.js',
                 '/modules/lib_jquery/plugins/Slimbox2/slimbox2.js',
-                '/modules/module_info/js/jquery.dragsort-0.5.2.min.js'
+                '/modules/module_info/js/jquery.dragsort-0.5.2.min.js',
+                '/modules/lib_jquery/jquery-ui/external/jquery.MultiFile.pack.js',
+                '/modules/lib_jquery/jquery-ui/external/jquery.MetaData.js'
 			)
 		)
 	);
