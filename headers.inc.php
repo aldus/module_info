@@ -42,44 +42,48 @@ $mod_headers = array();
  */
 
 if ( file_exists( LEPTON_PATH.'/modules/lib_jquery/plugins/Slimbox2' ) ) {
-    $mod_headers = array(
-		'frontend' => array(
-		    'css' => array(
-				array(
-					'media'	=> 'screen',
-					'file'	=> '/modules/lib_jquery/plugins/Slimbox2/slimbox2.css',
+	// prevent to load the header(-s) twice a time if more than one section is used.
+	if (!defined("mod_module_info_headers")) {
+		define("mod_module_info_headers", true);
+		$mod_headers = array(
+			'frontend' => array(
+				'css' => array(
+					array(
+						'media'	=> 'screen',
+						'file'	=> '/modules/lib_jquery/plugins/Slimbox2/slimbox2.css',
+					),
+					array(
+						'media'	=> 'screen',
+						'file'	=> '/modules/module_info/rating/rating.css'
+					)
 				),
-				array(
-					'media'	=> 'screen',
-					'file'	=> '/modules/module_info/rating/rating.css'
+				'jquery' => array(
+					array(
+						'core'	=> true
+					)
+				),	
+				'js' => array(
+					'/modules/lib_jquery/plugins/Slimbox2/slimbox2.js'
 				)
 			),
-			'jquery' => array(
-				array(
-					'core'	=> true
+			'backend' => array(
+				'css' => array(
+					array(
+						'media'	=> 'screen',
+						'file'	=> '/modules/lib_jquery/plugins/Slimbox2/slimbox2.css',
+					)
+				),	
+				'js' => array(
+					'/modules/lib_jquery/jquery-ui/external/jquery.idTabs.min.js',
+					'/modules/lib_jquery/jquery-ui/external/jquery-insert.js',
+					'/modules/lib_jquery/plugins/Slimbox2/slimbox2.js',
+					'/modules/module_info/js/jquery.dragsort-0.5.2.min.js',
+					'/modules/lib_jquery/jquery-ui/external/jquery.MultiFile.pack.js',
+					'/modules/lib_jquery/jquery-ui/external/jquery.MetaData.js'
 				)
-			),	
-			'js' => array(
-                '/modules/lib_jquery/plugins/Slimbox2/slimbox2.js'
 			)
-		),
-		'backend' => array(
-		    'css' => array(
-				array(
-					'media'	=> 'screen',
-					'file'	=> '/modules/lib_jquery/plugins/Slimbox2/slimbox2.css',
-				)
-			),	
-			'js' => array(
-				'/modules/lib_jquery/jquery-ui/external/jquery.idTabs.min.js',
-				'/modules/lib_jquery/jquery-ui/external/jquery-insert.js',
-                '/modules/lib_jquery/plugins/Slimbox2/slimbox2.js',
-                '/modules/module_info/js/jquery.dragsort-0.5.2.min.js',
-                '/modules/lib_jquery/jquery-ui/external/jquery.MultiFile.pack.js',
-                '/modules/lib_jquery/jquery-ui/external/jquery.MetaData.js'
-			)
-		)
-	);
+		);
+	}
 }
 
 /**

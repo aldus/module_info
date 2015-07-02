@@ -16,7 +16,7 @@
 $module_directory	= 'module_info';
 $module_name		= 'Module Information';
 $module_function	= 'page';
-$module_version		= '0.7.7';
+$module_version		= '0.8.0';
 $module_platform	= '2.0.0';
 $module_author		= 'Dietrich Roland Pehlke';
 $module_license		= 'GNU General Public License';
