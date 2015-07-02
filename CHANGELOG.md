@@ -7,6 +7,7 @@ Please note: This change log may not be accurate
 #### 0.8.0
 - Add precheck.php to the project
 - Prevent header-inc loaded twice a time.
+- Remove misspelled namespace from twig-loader.
 
 #### 0.7.7
 - Bugfixes for multible sections

@@ -29,7 +29,7 @@ if (!isset($parser))
 {
 	require_once( LEPTON_PATH."/modules/lib_twig/library.php" );
 }
-$loader->prependPath( dirname(__FILE__)."/templates/", "modul_info" );
+$loader->prependPath( dirname(__FILE__)."/templates/", "module_info" );
 
 /***
  *	Secure-Hash for the download-counter
@@ -42,7 +42,7 @@ $h_name = substr($hash, 0, 16);
 $h_value = substr($hash, -16);
 
 echo $parser->render(
-	"@modul_info/counter.lte",
+	"@module_info/counter.lte",
 	array(
 		'LEPTON_URL' => LEPTON_URL,
 		'h_name' => $h_name,
@@ -95,7 +95,7 @@ $av = ($mod_info['votes'] == 0)
 	;
 
 $rating_html = $parser->render(
-	"@modul_info/rating.lte",
+	"@module_info/rating.lte",
 	array(
 		'LEPTON_URL' => LEPTON_URL,
 		'votes'	=> $mod_info['votes']. " votes",
@@ -300,7 +300,7 @@ $output_values = array(
  *	At last we echo the hole page
  */
 echo $parser->render(
-	"@modul_info/view.lte",
+	"@module_info/view.lte",
 	$output_values
 );
 
