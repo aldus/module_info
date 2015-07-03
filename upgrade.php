@@ -142,7 +142,19 @@ foreach( $all as &$item) {
 	}
 }
 
-$database->execute_query(
-	"ALTER TABLE `".TABLE_PREFIX."mod_module_info` CHANGE `rating` `rating` VARCHAR(255)  NOT NULL  DEFAULT ''"
+//	Do we have to alter the field "rating" to varchar(255)?
+$table_info = array();
+$database->describe_table(
+	TABLE_PREFIX."mod_module_info",
+	$table_info
 );
+foreach($table_info as &$info) {
+	if ($info['Field'] == "rating") {
+		if ($info['Type'] != "varchar(255)") {
+			$database->execute_query(
+				"ALTER TABLE `".TABLE_PREFIX."mod_module_info` CHANGE `rating` `rating` VARCHAR(255)  NOT NULL  DEFAULT ''"
+			);
+		}
+	}
+}
 ?>
